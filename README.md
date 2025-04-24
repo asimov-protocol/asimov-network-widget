@@ -2,6 +2,9 @@
 
 A React component for visualizing network graphs in Asimov Protocol applications with customizable styling to match the Asimov design system.
 
+<img width="805" alt="ASIMOV Network Widget" src="https://github.com/user-attachments/assets/c753407e-e2e4-4da9-9504-b1a4b6dcb1d0" />
+
+
 ### Overview
 
 The ASIMOV Network Widget provides a configurable network visualization using the [vis-network](https://github.com/visjs/vis-network) library, designed to integrate seamlessly with Asimov Protocol applications. The widget allows developers to create interactive network graphs with nodes and edges, visualizing relationships between protocol components.
