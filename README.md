@@ -1,19 +1,19 @@
 # ASIMOV Network Widget
 
-A React component for visualizing network graphs in Asimov Protocol applications with customizable styling to match the Asimov design system.
+A React component for visualizing network graphs in ASIMOV Protocol applications with customizable styling to match the ASIMOV design system.
 
 <img width="805" alt="ASIMOV Network Widget" src="https://github.com/user-attachments/assets/c753407e-e2e4-4da9-9504-b1a4b6dcb1d0" />
 
 
 ### Overview
 
-The ASIMOV Network Widget provides a configurable network visualization using the [vis-network](https://github.com/visjs/vis-network) library, designed to integrate seamlessly with Asimov Protocol applications. The widget allows developers to create interactive network graphs with nodes and edges, visualizing relationships between protocol components.
+The ASIMOV Network Widget provides a configurable network visualization using the [vis-network](https://github.com/visjs/vis-network) library, designed to integrate seamlessly with ASIMOV Protocol applications. The widget allows developers to create interactive network graphs with nodes and edges, visualizing relationships between protocol components.
 
 ### Features
 
 - Interactive network graph visualization
 - Customizable node types based on groups (project, module, token, protocol)
-- Distinctive node shapes and colors matching Asimov design system
+- Distinctive node shapes and colors matching ASIMOV design system
 - Configurable edge length and styling
 - Node selection and double-click focus interactions
 - Completely customizable through props
@@ -82,7 +82,7 @@ function App() {
 
 ### Styling
 
-The NetworkView component uses a default color theme that follows the Asimov design system:
+The NetworkView component uses a default color theme that follows the ASIMOV design system:
 
 ```ts
 const defaultColorTheme = {
