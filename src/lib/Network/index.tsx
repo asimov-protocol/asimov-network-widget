@@ -15,16 +15,15 @@ export interface ColorTheme {
   edgeHighlight: string;
 }
 
-// Default color theme using the provided color palette
 const defaultColorTheme: ColorTheme = {
-  project: '#395183',
-  module: '#6a7ca2',
-  token: '#f37021',
-  protocol: '#072564',
-  border: '#05122e',
-  font: '#f6f6f6',
-  edge: '#818181',
-  edgeHighlight: '#395183',
+  project: '#2c4a7a',
+  module: '#5a6d92',
+  token: '#e65a00',
+  protocol: '#1a3d6b',
+  border: '#2d3748',
+  font: '#b3b3b3',
+  edge: '#4a5568',
+  edgeHighlight: '#2c4a7a',
 };
 
 export interface NetworkViewProps {
@@ -82,6 +81,17 @@ export const NetworkView: React.FC<NetworkViewProps> = ({
       }
     };
 
+    const getFontColor = (group?: string): string => {
+      switch (group) {
+        case 'project': return '#2c4a7a';
+        case 'module':
+        case 'protocol':
+          return '#ffffff';
+        case 'token': return '#e65a00';
+        default: return theme.font;
+      }
+    };
+
     const nodes = new DataSet(
       data.nodes?.map(node => ({
         ...node,
@@ -92,11 +102,21 @@ export const NetworkView: React.FC<NetworkViewProps> = ({
           background: getNodeColor(node.group as string),
           border: theme.border,
           highlight: {
-            background: '#b5bed1',
+            background: getNodeColor(node.group as string),
+            border: theme.border
+          },
+          hover: {
+            background: getNodeColor(node.group as string),
             border: theme.border
           }
         },
-        font: { color: theme.font },
+        font: {
+          color: getFontColor(node.group as string),
+          strokeWidth: 0,
+          strokeColor: 'transparent',
+          size: node.group === 'project' ? 14 : 12,
+          face: 'arial'
+        },
         size: node.group === 'project' ? 30 : 20,
       })) || []
     );

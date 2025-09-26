@@ -5,21 +5,50 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .network-container {
   width: 100%;
   height: 100vh;
+  background-color: white;
 }
 
-/* Custom tooltips */
+/* Custom tooltips optimized for white background */
 .vis-tooltip {
   position: absolute;
   padding: 8px 12px;
-  background-color: #2b2b2b;
+  background-color: #2d3748;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 12px;
   z-index: 10000;
   max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+}
+
+.network-widget .vis-network canvas {
+  border-radius: 8px;
+}
+
+.vis-navigation {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.vis-button {
+  background-color: white !important;
+  color: #2d3748 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.vis-button:hover {
+  background-color: #f7fafc !important;
+  border-color: #cbd5e0 !important;
 }
