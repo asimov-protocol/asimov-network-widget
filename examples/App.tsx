@@ -192,6 +192,28 @@ function App() {
   // Handle network initialization
   const handleNetworkInit = useCallback((network: Network) => {
     networkRef.current = network;
+    // Set initial zoom level to zoom out
+    setTimeout(() => {
+      if (network) {
+        // First fit the network, then zoom out
+        network.fit({
+          animation: {
+            duration: 500,
+            easingFunction: 'easeInOutQuad'
+          }
+        });
+        // Then zoom out
+        setTimeout(() => {
+          network.moveTo({
+            scale: 0.6, // Zoom out to 60% of current scale
+            animation: {
+              duration: 800,
+              easingFunction: 'easeInOutQuad'
+            }
+          });
+        }, 600);
+      }
+    }, 100);
   }, []);
 
   // Handle node selection
@@ -218,9 +240,9 @@ function App() {
     physics: {
       stabilization: false,
       barnesHut: {
-        gravitationalConstant: -8000,
+        gravitationalConstant: -4000, // Reduced from -8000 for less attraction
         springConstant: 0.001,
-        springLength: 200,
+        springLength: 350, // Increased from 200 for more spacing
       },
     },
     interaction: {
@@ -228,6 +250,8 @@ function App() {
       tooltipDelay: 200,
       navigationButtons: true,
       keyboard: true,
+      zoomView: true,
+      dragView: true,
     },
   };
 

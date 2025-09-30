@@ -1,6 +1,6 @@
 # ASIMOV Network Widget
 
-A React component for visualizing network graphs in ASIMOV Protocol applications with customizable styling to match the ASIMOV design system.
+A React component for visualizing network graphs in ASIMOV Protocol applications with customizable styling and dynamic data simulation capabilities.
 
 <img width="805" alt="ASIMOV Network Widget" src="https://github.com/user-attachments/assets/c753407e-e2e4-4da9-9504-b1a4b6dcb1d0" />
 
