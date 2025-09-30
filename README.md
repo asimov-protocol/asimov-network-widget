@@ -135,6 +135,12 @@ const options = {
 />
 ```
 
+## Live Demo
+
+🌐 **[View Live Demo on GitHub Pages](https://asimov-protocol.github.io/asimov-network-widget/)**
+
+Experience the full interactive network simulation with all dynamic features directly in your browser.
+
 ## Local Development
 
 If you’d like to work with this repository directly, simply clone it and install its dependencies. Then, you can spin up the development server with the following commands:
